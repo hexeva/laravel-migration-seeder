@@ -20,9 +20,9 @@ class TravelsTableSeeder extends Seeder
             $new_trip->destination = $faker->country();
             $new_trip->trip_nights = $faker->randomDigitNotNull();
             $new_trip->description = $faker->paragraph();
-            $new_trip->price = 'Euro'. $faker->randomFloat(2);
+            $new_trip->price =  $faker->randomFloat(2,0,9999);
             $new_trip->discount = $faker->boolean();
-            $new_trip->discount_amount = $faker->randomDigit(0,20) . '%';
+            $new_trip->discount_amount = $faker->randomDigit(0,20);
             $new_trip->votes = $faker->randomDigitNotNull();
             $new_trip->save();
             
