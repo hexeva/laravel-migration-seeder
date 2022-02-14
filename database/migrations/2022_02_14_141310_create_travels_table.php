@@ -18,7 +18,7 @@ class CreateTravelsTable extends Migration
             $table->string('destination', 40);
             $table->tinyInteger('trip_nights')->unsigned();
             $table->text('description');
-            $table->smallInteger('price')->unsigned();
+            $table->decimal('price', 6, 2)->unsigned();
             $table->boolean('discount')->default(0);
             $table->tinyInteger('discount_amount');
             $table->tinyInteger('votes');
